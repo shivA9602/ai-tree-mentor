@@ -1,0 +1,116 @@
+/* Page Layout */
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Inter", sans-serif;
+}
+
+/* Glass Card */
+.mentor-card {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 360px;
+  padding: 50px;
+  border-radius:20px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Title */
+.mentor-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Textarea */
+.mentor-textarea {
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.mentor-textarea:focus {
+  border: 1px solid #2e7d32;
+}
+
+/* Button */
+.mentor-button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  background: #2e7d32;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.mentor-button:hover {
+  background: #1b5e20;
+  transform: scale(1.02);
+}
+
+.mentor-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Advice Text */
+.mentor-advice {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  animation: fadeIn 0.4s ease-in;
+}
+
+/* Sentiment Badge */
+.sentiment-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.positive {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.neutral {
+  background: #f1f8e9;
+  color: #558b2f;
+}
+
+.negative {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
